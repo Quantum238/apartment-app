@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "apartment-app": {
+    "frontend": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -15,9 +15,9 @@
       },
       "architect": {
         "build": {
-          "builder": "ngx-build-plus:build",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apartment-app",
+            "outputPath": "dist/frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -59,20 +59,20 @@
           }
         },
         "serve": {
-          "builder": "ngx-build-plus:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "apartment-app:build"
+            "browserTarget": "frontend:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "apartment-app:build:production"
+              "browserTarget": "frontend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "apartment-app:build"
+            "browserTarget": "frontend:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "apartment-app-e2e": {
+    "frontend-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "apartment-app:serve"
+            "devServerTarget": "frontend:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "apartment-app:serve:production"
+              "devServerTarget": "frontend:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "apartment-app"
+  "defaultProject": "frontend"
 }

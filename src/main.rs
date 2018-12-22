@@ -26,7 +26,7 @@ fn main() {
     	.attach(AdHoc::on_attach("Angular Config", |rocket| {
     		let angular_dir = rocket.config()
     			.get_str("angular_root")
-    			.unwrap_or("../apartment-app/src/")
+    			.unwrap_or("dist/frontend/")
     			.to_string();
     		println!("{:?}",angular_dir );
     		Ok(rocket.manage(AngularDir(angular_dir)))

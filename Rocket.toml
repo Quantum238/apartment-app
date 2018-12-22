@@ -1,3 +1,3 @@
 [global]
 template_dir = "templates/"
-angular_root="../../apartment-app/apartment-app/dist/apartment-app/"
+angular_root="dist/frontend/"
