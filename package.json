@@ -8,11 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "cargo_check": "cargo watch -x check -s 'touch .cargo_trigger' -c -w src/ -i '*.html' -i '*.ts' -i '*.json'",
+    "cargo_check": "cargo watch -x check -s 'touch .cargo_trigger' -c -w src/ -i 'app/*'",
     "cargo_run": "cargo watch --no-gitignore -w .cargo_trigger -x run",
     "ng_watch": "ng build --watch",
     "watch": "npm run cargo_check & npm run cargo_run & npm run ng_watch &",
-    "watch2": "cargo watch -x check -s 'touch .cargo_trigger' -c -w src/ -i '*.html' -i '*.ts' -i '*.json' & cargo watch --no-gitignore -w .cargo_trigger -x run & ng build --watch &"
+    "watch2": "cargo watch -x check -s 'touch .cargo_trigger' -c -w src/ -i 'app/*' -i '*.json' & cargo watch --no-gitignore -w .cargo_trigger -x run & ng build --watch &"
   },
   "private": true,
   "dependencies": {

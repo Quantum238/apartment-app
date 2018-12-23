@@ -47,6 +47,7 @@ Thumbs.db
 /target
 **/*.rs.bk
 .cargo_trigger
+.env
 
 # Custom
 tmp*exe
